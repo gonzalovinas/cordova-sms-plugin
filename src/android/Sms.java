@@ -90,10 +90,10 @@ public class Sms extends CordovaPlugin {
 					if (replaceLineBreaks) {
 						message = message.replace("\\n", System.getProperty("line.separator"));
 					}
-					if (!checkSupport()) {
+					/*if (!checkSupport()) {
 						callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, "SMS not supported on this platform"));
 						return;
-					}
+					}*/
 					if (method.equalsIgnoreCase("INTENT")) {
 						invokeSMSIntent(phoneNumber, message);
 						// always passes success back to the app
